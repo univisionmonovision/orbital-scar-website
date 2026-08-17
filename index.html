@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orbital Scar Studios</title>
+  <meta name="description" content="Orbital Scar Studios — worlds worth getting lost in. Our first world is growing." />
+  <meta name="theme-color" content="#0B0D12" />
+  <style>
+    :root{
+      --bg:#0B0D12; --deep:#141922; --ice:#7EC8FF;
+      --metal:#E6E6E6; --muted:#9aa4af;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--metal);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{
+      overflow-x:hidden;
+      background:
+        radial-gradient(circle at 50% 25%, rgba(126,200,255,.07), transparent 32%),
+        radial-gradient(circle at 50% 78%, rgba(255,90,0,.05), transparent 28%),
+        var(--bg);
+    }
+    .stars,.stars:before{
+      position:fixed; inset:0; content:""; pointer-events:none; z-index:0;
+      background-repeat:repeat; opacity:.28;
+    }
+    .stars{
+      background-image:
+        radial-gradient(circle at 20% 30%, #fff 0 1px, transparent 1.2px),
+        radial-gradient(circle at 70% 55%, #7EC8FF 0 1px, transparent 1.2px),
+        radial-gradient(circle at 40% 80%, #fff 0 1px, transparent 1.2px);
+      background-size:220px 220px, 280px 280px, 340px 340px;
+      animation:drift 28s linear infinite;
+    }
+    .stars:before{
+      background-image:
+        radial-gradient(circle at 10% 10%, #fff 0 1px, transparent 1.2px),
+        radial-gradient(circle at 90% 20%, #fff 0 1px, transparent 1.2px);
+      background-size:420px 420px, 520px 520px;
+      opacity:.16;
+      animation:drift2 42s linear infinite;
+    }
+    @keyframes drift{from{transform:translateY(0)}to{transform:translateY(-80px)}}
+    @keyframes drift2{from{transform:translateX(0)}to{transform:translateX(-100px)}}
+
+    main{position:relative;z-index:1;min-height:100vh;display:grid;place-items:center;padding:32px 20px}
+    .wrap{width:min(920px,100%);text-align:center}
+    .logo{
+      width:min(720px,92vw);max-height:62vh;object-fit:contain;display:block;margin:0 auto 18px;
+      filter:drop-shadow(0 0 24px rgba(126,200,255,.08));
+    }
+    .tagline{
+      margin:8px 0 30px;color:var(--ice);letter-spacing:.12em;text-transform:uppercase;
+      font-size:clamp(.78rem,1.6vw,.98rem);font-weight:600;
+    }
+    .rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--ice),transparent);margin:34px auto 0;opacity:.7}
+    .eyebrow{color:var(--muted);text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;margin-bottom:12px}
+    h1{margin:0;font-size:clamp(2rem,6vw,4.6rem);line-height:.98;letter-spacing:-.035em}
+    .lead{color:#c5ccd3;font-size:clamp(1rem,2.4vw,1.25rem);max-width:620px;margin:22px auto 0;line-height:1.6}
+    .watch{
+      display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:12px 18px;
+      border:1px solid rgba(126,200,255,.28);border-radius:999px;color:var(--metal);
+      background:rgba(20,25,34,.58);backdrop-filter:blur(8px);
+      box-shadow:0 0 30px rgba(126,200,255,.04);letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--ice);box-shadow:0 0 14px var(--ice);animation:pulse 2.2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}
+    footer{margin-top:52px;color:#6f7984;font-size:.78rem}
+    @media (max-width:600px){main{padding:24px 16px}.logo{width:min(92vw,620px);margin-bottom:10px}footer{margin-top:38px}}
+    @media (prefers-reduced-motion:reduce){.stars,.stars:before,.dot{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <main>
+    <section class="wrap">
+      <img class="logo" src="orbital-scar-logo.png" alt="Orbital Scar Studios logo" />
+      <div class="tagline">Worlds worth getting lost in.</div>
+      <div class="rule"></div>
+      <div style="margin-top:34px">
+        <div class="eyebrow">Independent game studio · New Zealand</div>
+        <h1>Something is taking shape.</h1>
+        <p class="lead">Our first world is growing. More from Orbital Scar Studios is coming soon.</p>
+        <div class="watch"><span class="dot"></span> Watch this space</div>
+      </div>
+      <footer>© 2026 Orbital Scar Studios</footer>
+    </section>
+  </main>
+</body>
+</html>
